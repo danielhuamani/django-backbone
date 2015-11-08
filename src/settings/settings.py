@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
+from os.path import dirname, join, realpath
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = dirname(dirname(realpath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,6 +37,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'apps.comentarios',
+    'apps.publicaciones',
+    'apps.usuarios'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,7 +81,7 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -99,4 +103,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+
+MEDIA_ROOT = join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    join(BASE_DIR, 'static'),
+)
