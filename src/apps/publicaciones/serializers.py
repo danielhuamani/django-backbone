@@ -15,4 +15,4 @@ class NoticiaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Noticia
-        fields = ('titulo', 'descripcion', 'imagen', 'fecha', 'tipo')
+        fields = ('id', 'titulo', 'descripcion', 'imagen', 'fecha', 'tipo')
