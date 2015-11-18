@@ -18,7 +18,7 @@ class Noticia(models.Model):
     tipo = models.ForeignKey(TipoNoticia, related_name='tipo_noticia', null=True)
     titulo = models.CharField("Titulo", max_length=120)
     descripcion = models.TextField("descripcion")
-    imagen = models.ImageField("Imagen", upload_to="noticia")
+    imagen = models.ImageField("Imagen", upload_to="noticia", blank=True)
     fecha = models.DateTimeField("Fecha", auto_now_add=True)
 
     class Meta:

@@ -1,0 +1,65 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="cnt-publicaciones wancho">
+	<section class="publicaciones">
+		<article class="tipo-publicaciones">
+			<ul>
+				{% for tipo in tipo_noticias %}
+					<li>{{tipo.tipo}}</li>
+				{% endfor %}
+			</ul>
+		</article>
+		<article class="publicacion">
+			<form action="" id="buscar">
+				<input type="text" placeholder="Buscar">
+				<button>Buscar</button>
+			</form>
+			<div class="item">
+				<figure>
+					<img src="{% static 'img/php.png' %}" width="120" height="120" alt="">
+				</figure>
+				<div class="cnt-texto">
+					<div class="texto">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus facilis ipsum, sit rem. Harum consequuntur, voluptatem eligendi nihil! Repudiandae dolorum natus reiciendis rem sapiente perspiciatis fugiat commodi tenetur eveniet quos.
+					</div>
+					<a href="" class="ver-mas">
+						ver mas
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img src="{% static 'img/php.png' %}" width="120" height="120" alt="">
+				</figure>
+				<div class="cnt-texto">
+					<div class="texto">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus facilis ipsum, sit rem. Harum consequuntur, voluptatem eligendi nihil! Repudiandae dolorum natus reiciendis rem sapiente perspiciatis fugiat commodi tenetur eveniet quos.
+					</div>
+					<a href="" class="ver-mas">
+						ver mas
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img src="{% static 'img/php.png' %}" width="120" height="120" alt="">
+				</figure>
+				<div class="cnt-texto">
+					<div class="texto">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus facilis ipsum, sit rem. Harum consequuntur, voluptatem eligendi nihil! Repudiandae dolorum natus reiciendis rem sapiente perspiciatis fugiat commodi tenetur eveniet quos.
+					</div>
+					<a href="" class="ver-mas">
+						ver mas
+					</a>
+				</div>
+			</div>
+		</article>
+	</section>
+
+
+</div>
+
+
+{% endblock content %}

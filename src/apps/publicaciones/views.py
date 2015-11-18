@@ -15,5 +15,5 @@ class TipoNoticiaViewSet(viewsets.ModelViewSet):
 
 
 def home(request):
-    return render(request, 'noticias.html', locals())
-
+    tipo_noticias = TipoNoticia.objects.all()
+    return render(request, 'publicaciones.html', locals())

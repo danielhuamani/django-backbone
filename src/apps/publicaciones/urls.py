@@ -11,5 +11,5 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^api/', include(router.urls)),
-    url(r'^', views.home, name="home"),
+    url(r'^$', views.home, name="home"),
 ]
